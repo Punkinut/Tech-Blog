@@ -81,3 +81,13 @@
 .login:hover {
   opacity: 50%;
 }
+
+@media screen and (max-width: 400px) {
+  .navigation {
+    width: 70%;
+  }
+
+  .title {
+    display: none;
+  }
+}

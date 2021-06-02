@@ -62,7 +62,7 @@ body {
 
 .title {
   font-size: 40px;
-  cursor: default;
+  cursor: pointer;
   color: var(--black);
 }
 
@@ -80,6 +80,8 @@ body {
 
 .login {
   cursor: pointer;
+  text-decoration: none !important;
+  color: var(--black) !important;
   transition: all 100ms ease-in-out;
 }
 

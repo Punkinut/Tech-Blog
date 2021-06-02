@@ -92,7 +92,10 @@ body {
   position: relative;
   margin: 15px auto;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+  padding-bottom: 70px;
 }
 
 .card {
@@ -117,6 +120,12 @@ body {
   line-height: 2.5rem;
 }
 
+@media screen and (max-width: 600px) {
+  .card {
+    width: 80%;
+  }
+}
+
 @media screen and (max-width: 400px) {
   .navigation {
     width: 70%;
@@ -124,5 +133,9 @@ body {
 
   .title {
     display: none;
+  }
+
+  .card {
+    width: 100%;
   }
 }

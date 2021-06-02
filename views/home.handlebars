@@ -2,7 +2,7 @@
 <section class="container">
     <section class="card roboto">
         <p class="f700 heading">{{this.name}}</p>
-        <p class="f300 date">19 May 2021 | {{this.user.name}}</p>
+        <p class="f300 date">{{format_time this.date_created}} | {{this.user.name}}</p>
         <p class="f400 desc">{{this.description}}</p>
     </section>
 </section>

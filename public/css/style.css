@@ -170,14 +170,27 @@ button:hover {
 
 @media screen and (max-width: 400px) {
   .navigation {
-    width: 70%;
+    width: 80%;
   }
 
   .title {
-    display: none;
+    font-size: 28px;
+  }
+
+  .login {
+    font-size: 16px;
+  }
+
+  .hamburger {
+    width: 25px;
   }
 
   .card {
     width: 100%;
+  }
+
+  input,
+  button {
+    width: 230px;
   }
 }

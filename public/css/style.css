@@ -67,9 +67,9 @@ body {
 }
 
 .hamburger {
-  width: 25px;
+  width: 30px;
   transform: rotate(90deg);
-  opacity: 90%;
+  opacity: 80%;
   cursor: pointer;
   transition: all 100ms ease-in-out;
 }

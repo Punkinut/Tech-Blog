@@ -113,6 +113,17 @@ body {
   line-height: 3rem;
 }
 
+.person {
+  width: 400px;
+}
+
+.redirect {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .heading {
   font-size: 30px;
   color: var(--black);

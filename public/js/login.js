@@ -14,7 +14,6 @@ const loginFormHandler = async (event) => {
           if (response.ok) {
             document.location.replace('/dashboard');
           } else {
-            console.log('Not working')
             $('.form-input').css('border', '2px solid rgba(255, 0, 0, 0.253)')
             $('.wrong').css('display', 'block');
           }
@@ -28,6 +27,7 @@ const logout = async () => {
   });
 
   if (response.ok) {
+    console.log('Works')
     document.location.replace('/');
   } else {
     alert(response.statusText);

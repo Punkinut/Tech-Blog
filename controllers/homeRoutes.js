@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/dashboard', async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
     try {
         res.render('dashboard', {
             logged_in: req.session.logged_in 

@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { User, Post} = require('../models');
 const withAuth = require('../utils/auth');
+const redirect= require('../utils/redirect');
 const home = require('../utils/home');
 
 router.get('/', async (req, res) => {
@@ -24,11 +25,19 @@ router.get('/', async (req, res) => {
     }
 })
 
-router.get('/dashboard', withAuth, async (req, res) => {
+router.get('/dashboard', redirect, async (req, res) => {
     try {
         res.render('dashboard', {
             logged_in: req.session.logged_in 
         });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/redirect', async (req, res) => {
+    try {
+        res.render('redirect');
     } catch (err) {
         res.status(500).json(err);
     }

@@ -6,19 +6,13 @@ router.post('/login', async (req, res) => {
       const userData = await User.findOne({ where: { email: req.body.email } });
 
       if (!userData) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
-        return;
+        res.status(400);
       }
   
       const validPassword = await userData.checkPassword(req.body.password);
   
       if (!validPassword) {
-        res
-          .status(400)
-          .json({ message: 'Incorrect email or password, please try again' });
-        return;
+        res.status(400);
       }
   
       req.session.save(() => {

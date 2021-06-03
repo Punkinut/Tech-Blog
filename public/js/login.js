@@ -36,7 +36,9 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/dashboard');
     } else {
-      alert(response.statusText);
+      $('.form-input').css('border', '2px solid rgba(255, 0, 0, 0.253)')
+      $('.wrong').css('display', 'block');
+      
     }
   }
 };

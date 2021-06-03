@@ -147,6 +147,10 @@ body {
   margin-top: 40px;
 }
 
+.signup-form {
+  margin-top: 40px;
+}
+
 input {
   border: 2px solid rgb(230, 230, 230);
   background-color: var(--white);
@@ -155,6 +159,7 @@ input {
   border-radius: 20px;
   width: 300px;
   outline: none;
+  background-color: white;
 }
 
 button {

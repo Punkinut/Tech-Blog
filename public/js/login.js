@@ -12,7 +12,6 @@ const loginFormHandler = async (event) => {
           });
 
           if (response.ok) {
-            console.log('Works')
           } else {
             alert(response.statusText);
           }

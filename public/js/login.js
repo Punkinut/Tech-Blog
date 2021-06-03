@@ -14,6 +14,7 @@ const loginFormHandler = async (event) => {
           if (response.ok) {
             document.location.replace('/dashboard');
           } else {
+            console.log('Not working')
             $('.form-input').css('border', '2px solid rgba(255, 0, 0, 0.253)')
             $('.wrong').css('display', 'block');
           }

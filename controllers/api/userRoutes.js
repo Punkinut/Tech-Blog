@@ -7,12 +7,14 @@ router.post('/login', async (req, res) => {
 
       if (!userData) {
         res.status(400);
+        return;
       }
   
       const validPassword = await userData.checkPassword(req.body.password);
   
       if (!validPassword) {
         res.status(400);
+        return;
       }
   
       req.session.save(() => {

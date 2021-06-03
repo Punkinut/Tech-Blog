@@ -35,7 +35,7 @@ router.get('/dashboard', redirect, async (req, res) => {
     }
 })
 
-router.get('/redirect', async (req, res) => {
+router.get('/redirect', withAuth, async (req, res) => {
     try {
         res.render('redirect');
     } catch (err) {

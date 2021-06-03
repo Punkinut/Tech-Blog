@@ -166,6 +166,18 @@ button:hover {
   color: var(--black) !important;
 }
 
+.wrong {
+  opacity: 40%;
+  font-size: 15px;
+  padding-top: 20px;
+  cursor: pointer;
+  text-decoration: none !important;
+  color: red !important;
+  position: absolute;
+  top: -5px;
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .card {
     width: 80%;

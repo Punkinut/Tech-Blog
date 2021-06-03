@@ -122,6 +122,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+}
+
+.validate {
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .heading {
@@ -218,6 +224,10 @@ button:hover {
 
   input,
   button {
+    width: 230px;
+  }
+
+  .person {
     width: 230px;
   }
 }

@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const { User, Post} = require('../models');
+const withAuth = require('../utils/auth');
+const home = require('../utils/home');
 
 router.get('/', async (req, res) => {
     try {
@@ -14,7 +16,8 @@ router.get('/', async (req, res) => {
 
         const posts = postData.map((post) => post.get({ plain: true}));
         res.render('home', {
-            posts
+            posts,
+            logged_in: req.session.logged_in 
         });
     } catch (err) {
         res.status(500).json(err);
@@ -23,13 +26,15 @@ router.get('/', async (req, res) => {
 
 router.get('/dashboard', async (req, res) => {
     try {
-        res.render('dashboard');
+        res.render('dashboard', {
+            logged_in: req.session.logged_in 
+        });
     } catch (err) {
         res.status(500).json(err);
     }
 })
 
-router.get('/login', async (req, res) => {
+router.get('/login', home, async (req, res) => {
     try {
         res.render('login');
     } catch (err) {

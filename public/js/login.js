@@ -20,6 +20,27 @@ const loginFormHandler = async (event) => {
     }
 };
 
+const signupFormHandler = async (event) => {
+  event.preventDefault();
+  const name = $('#name-sign').val().trim();
+  const email =  $('#email-sign').val().trim();
+  const password = $('#password-sign').val().trim();
+
+  if (name && email && password) {
+    const response = await fetch('/api/users', {
+      method: 'POST',
+      body: JSON.stringify({ name, email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      document.location.replace('/dashboard');
+    } else {
+      alert(response.statusText);
+    }
+  }
+};
+
 const logout = async () => {
   const response = await fetch('/api/users/logout', {
     method: 'POST',
@@ -35,4 +56,5 @@ const logout = async () => {
 }
 
 $('.login-form').on('submit', loginFormHandler);
+$('.signup-form').on('submit', signupFormHandler);
 $('#logout').on('click', logout);

@@ -131,7 +131,7 @@ body {
 }
 
 input {
-  border: 1px solid rgb(230, 230, 230);
+  border: 2px solid rgb(230, 230, 230);
   background-color: var(--white);
   padding: 20px;
   margin: 15px 0px;

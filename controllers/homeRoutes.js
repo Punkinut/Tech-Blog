@@ -72,6 +72,28 @@ router.get('/dashboard/new', redirect, async (req, res) => {
     }
 })
 
+router.get('/dashboard/view/:id', redirect, async (req, res) => {
+    try {
+      const postData = await Post.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          },
+        ],
+      });
+  
+      const viewPost = postData.get({ plain: true });
+  
+      res.render('editPost', {
+        ...viewPost,
+        logged_in: req.session.logged_in
+      });
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
 router.get('/login', home, async (req, res) => {
     try {
         res.render('login');

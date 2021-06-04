@@ -120,7 +120,7 @@ body {
 
 #post-title,
 #post-description {
-  width: 30vw;
+  width: 400px;
 }
 
 #post-description {
@@ -296,5 +296,10 @@ button:hover {
 
   .person {
     width: 230px;
+  }
+
+  #post-title,
+  #post-description {
+    width: 250px;
   }
 }

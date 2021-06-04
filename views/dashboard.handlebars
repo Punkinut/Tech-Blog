@@ -1,9 +1,11 @@
 <section class="container">
+    {{#if postStatus}}
     {{#each currentPosts}}
     <section class="card2">
         <p class="f400 curHead roboto">{{this.name}}</p>
         <p class="f400 roboto datePost">{{format_time this.date_created}}</p>
     </section>
     {{/each}}
+    {{/if}}
 </section>
  <a href="/dashboard/new"><img class="add" src="/images/add.svg"/></a>

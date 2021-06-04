@@ -34,10 +34,17 @@ router.get('/dashboard', redirect, async (req, res) => {
     });
    
     const currentPosts = userPosts.map((post) => post.get({ plain: true}));
-    console.log(currentPosts[0].name)
+    console.log(currentPosts + 'HERE')
+    let postStatus;
+    if (currentPosts === []) {
+        postStatus = false
+    } else {
+        postStatus = true
+    }
 
     try {
         res.render('dashboard', {
+            postStatus,
             currentPosts,
             logged_in: req.session.logged_in 
         });

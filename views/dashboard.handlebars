@@ -1,10 +1,12 @@
 <section class="container">
     {{#if postStatus}}
     {{#each currentPosts}}
-    <section class="card2">
-        <p class="f400 curHead roboto">{{this.name}}</p>
-        <p class="f400 roboto datePost">{{format_time this.date_created}}</p>
-    </section>
+    <a href="/dashboard/view/{{this.id}}">
+        <section class="card2">
+            <p class="f400 curHead roboto">{{this.name}}</p>
+            <p class="f400 roboto datePost">{{format_time this.date_created}}</p>
+        </section>
+    </a>
     {{/each}}
     {{else}}
     <section class="newContainer">

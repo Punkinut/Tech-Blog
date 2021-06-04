@@ -26,8 +26,19 @@ router.get('/', async (req, res) => {
 })
 
 router.get('/dashboard', redirect, async (req, res) => {
+
+    const userPosts = await Post.findAll({
+        where: {
+            user_id: req.session.user_id
+        },
+    });
+   
+    const currentPosts = userPosts.map((post) => post.get({ plain: true}));
+    console.log(currentPosts[0].name)
+
     try {
         res.render('dashboard', {
+            currentPosts,
             logged_in: req.session.logged_in 
         });
     } catch (err) {

@@ -1,6 +1,8 @@
 <section class="container">
-    <section class="card">
-
+    {{#each currentPosts}}
+    <section class="card2">
+        <p class="f400 curHead roboto">{{this.name}}</p>
     </section>
+    {{/each}}
 </section>
  <img class="add" src="/images/add.svg"/>

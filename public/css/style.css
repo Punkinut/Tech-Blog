@@ -124,6 +124,10 @@ body {
   line-height: 3rem;
 }
 
+.datePost {
+  opacity: 40%;
+}
+
 .person {
   width: 400px;
 }

@@ -13,6 +13,7 @@ router.get('/', async (req, res) => {
                     attributes: ['name'],
                 },
             ],
+            order: [['id', 'DESC']],
         });
 
         const posts = postData.map((post) => post.get({ plain: true}));
@@ -28,10 +29,10 @@ router.get('/', async (req, res) => {
 router.get('/dashboard', redirect, async (req, res) => {
 
     const userPosts = await Post.findAll({
-        order: ['date_created'],
         where: {
             user_id: req.session.user_id
         },
+        order: [['id', 'DESC']],
     });
    
     const currentPosts = userPosts.map((post) => post.get({ plain: true}));

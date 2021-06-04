@@ -119,11 +119,13 @@ body {
 }
 
 #post-title,
-#post-description {
+#post-description,
+#edit-description {
   width: 400px;
 }
 
-#post-description {
+#post-description,
+#edit-description {
   height: 300px;
   vertical-align: middle;
 }
@@ -301,7 +303,8 @@ button:hover {
   }
 
   #post-title,
-  #post-description {
+  #post-description,
+  #edit-description {
     width: 250px;
   }
 }

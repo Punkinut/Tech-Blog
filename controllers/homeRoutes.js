@@ -54,6 +54,16 @@ router.get('/redirect', withAuth, async (req, res) => {
     }
 })
 
+router.get('/dashboard/new', redirect, async (req, res) => {
+    try {
+        res.render('new', {
+            logged_in: req.session.logged_in 
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 router.get('/login', home, async (req, res) => {
     try {
         res.render('login');

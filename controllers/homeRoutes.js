@@ -34,9 +34,8 @@ router.get('/dashboard', redirect, async (req, res) => {
     });
    
     const currentPosts = userPosts.map((post) => post.get({ plain: true}));
-    console.log(currentPosts + 'HERE')
     let postStatus;
-    if (currentPosts === []) {
+    if (currentPosts[0] === undefined) {
         postStatus = false
     } else {
         postStatus = true

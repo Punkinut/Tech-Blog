@@ -6,6 +6,12 @@
         <p class="f400 roboto datePost">{{format_time this.date_created}}</p>
     </section>
     {{/each}}
+    {{else}}
+    <section class="newContainer">
+        <img class="person" src="/images/post.svg"/>
+        <p class="font f400 validate noPost">You have no posts yet</p>
+    </section>
+
     {{/if}}
 </section>
  <a href="/dashboard/new"><img class="add" src="/images/add.svg"/></a>

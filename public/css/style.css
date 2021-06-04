@@ -104,6 +104,19 @@ body {
   padding-bottom: 70px;
 }
 
+.newContainer {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.noPost {
+  padding-top: 15px;
+  opacity: 30%;
+}
+
 .card {
   width: 600px;
   margin: 30px 0px;

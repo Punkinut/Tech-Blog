@@ -98,6 +98,7 @@ body {
   position: relative;
   margin: 15px auto;
   display: flex;
+  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -105,7 +106,7 @@ body {
 }
 
 .newContainer {
-  min-height: 70vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -115,6 +116,20 @@ body {
 .noPost {
   padding-top: 15px;
   opacity: 30%;
+}
+
+#post-title,
+#post-description {
+  width: 30vw;
+}
+
+#post-description {
+  height: 300px;
+  vertical-align: middle;
+}
+
+#postButton {
+  width: 200px;
 }
 
 .card {

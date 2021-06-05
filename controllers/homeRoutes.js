@@ -73,6 +73,7 @@ router.get('/dashboard/new', redirect, async (req, res) => {
 })
 
 router.get('/dashboard/view/:id', redirect, async (req, res) => {
+    // if (req.session.user_id !== req.params.id)
     try {
       const postData = await Post.findByPk(req.params.id, {
         include: [
@@ -84,11 +85,14 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
       });
   
       const viewPost = postData.get({ plain: true });
-  
-      res.render('editPost', {
-        ...viewPost,
-        logged_in: req.session.logged_in
-      });
+      if (viewPost.user_id !== req.session.user_id) {
+        res.redirect('/');
+      } else {
+        res.render('editPost', {
+            ...viewPost,
+            logged_in: req.session.logged_in
+          });
+      }
     } catch (err) {
       res.status(500).json(err);
     }

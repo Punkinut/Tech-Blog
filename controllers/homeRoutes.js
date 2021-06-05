@@ -17,7 +17,16 @@ router.get('/', async (req, res) => {
         });
 
         const posts = postData.map((post) => post.get({ plain: true}));
+
+        let homeStatus;
+        if (posts[0] === undefined) {
+            homeStatus = false
+        } else {
+            homeStatus = true
+        }
+
         res.render('home', {
+            homeStatus,
             posts,
             logged_in: req.session.logged_in 
         });

@@ -1,5 +1,5 @@
-
 <section class="container">
+    {{#if homeStatus}}
     {{#each posts}}
     <section class="card roboto">
         <p class="f700 heading">{{this.name}}</p>
@@ -7,4 +7,10 @@
         <p class="f400 desc">{{this.description}}</p>
     </section>
     {{/each}}
+    {{else}}
+    <section class="newContainer">
+        <img class="nodata" src="/images/nodata.svg"/>
+        <p class="font f400 validate noPost">No one has posted yet</p>
+    </section>
+    {{/if}}
 </section>

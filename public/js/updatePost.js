@@ -3,18 +3,22 @@ const updatePost = async (event) => {
     if (event.target.hasAttribute('data-id')) {
       const id = event.target.getAttribute('data-id');
   
-  
-      const response = await fetch(`/api/blog/update/${id}`, {
-          method: 'PUT',
-          body: JSON.stringify({ title, description }),
-          headers: { 'Content-Type': 'application/json' },
-        });
-  
-        if (response.ok) {
-          document.location.replace('/dashboard');
-        } else {
-          console.log('ERROR')
-        }
+      const title = $('#edit-title').val().trim();
+      const description = $('#edit-description').val().trim();
+
+      if (title && description) {
+        const response = await fetch(`/api/blog/update/${id}`, {
+            method: 'PUT',
+            body: JSON.stringify({ title, description }),
+            headers: { 'Content-Type': 'application/json' },
+          });
+    
+          if (response.ok) {
+            document.location.replace('/dashboard');
+          } else {
+            console.log('ERROR')
+          }
+      }
       }
   };
   

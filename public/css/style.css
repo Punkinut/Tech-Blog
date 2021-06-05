@@ -266,6 +266,10 @@ button:hover {
   bottom: 55px;
 }
 
+.home {
+  display: none;
+}
+
 @media screen and (max-width: 600px) {
   .card {
     width: 80%;
@@ -278,7 +282,7 @@ button:hover {
   }
 
   .title {
-    font-size: 28px;
+    display: none;
   }
 
   .login {
@@ -291,6 +295,10 @@ button:hover {
 
   .card {
     width: 100%;
+  }
+
+  .card2 {
+    width: 80vw;
   }
 
   input,

@@ -143,6 +143,7 @@ body {
 }
 
 .card {
+  overflow: hidden;
   width: 600px;
   margin: 30px 0px;
   padding: 60px;
@@ -159,6 +160,7 @@ body {
 }
 
 .card2 {
+  overflow: hidden;
   width: 60vw;
   margin: 20px 0px;
   padding: 20px;

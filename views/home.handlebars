@@ -1,11 +1,13 @@
 <section class="container">
     {{#if homeStatus}}
     {{#each posts}}
-    <section class="card roboto">
-        <p class="f700 heading">{{this.name}}</p>
-        <p class="f300 date">{{format_time this.date_created}} | {{this.user.name}}</p>
-        <p class="f400 desc">{{this.description}}</p>
-    </section>
+    <a href="/page/comment/{{this.id}}">
+        <section class="card roboto">
+            <p class="f700 heading">{{this.name}}</p>
+            <p class="f300 date">{{format_time this.date_created}} | {{this.user.name}}</p>
+            <p class="f400 desc">{{this.description}}</p>
+        </section>
+    </a>
     {{/each}}
     {{else}}
     <section class="newContainer">

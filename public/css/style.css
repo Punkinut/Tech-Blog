@@ -178,6 +178,17 @@ body {
   border: 4px solid rgba(238, 238, 238, 0.596);
 }
 
+.card3 {
+  overflow: hidden;
+  width: 85%;
+  padding: 60px;
+  border-radius: 7px;
+  line-height: 3rem;
+  border: 1px solid var(--white);
+  cursor: pointer;
+  transition: all 100ms ease-in-out;
+}
+
 .datePost {
   opacity: 40%;
 }
@@ -327,6 +338,10 @@ button:hover {
 
   .card2 {
     width: 80vw;
+  }
+
+  .card3 {
+    width: 100%;
   }
 
   input,

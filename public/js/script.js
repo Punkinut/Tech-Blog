@@ -7,4 +7,5 @@ if ( pathname === '/redirect') {
 if ( pathname === '/dashboard') {
     $('.dash').css('display', 'none')
     $('.home').css('display', 'block')
+    $('.title').css('right', '0px')
 }

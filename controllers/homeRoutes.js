@@ -82,7 +82,6 @@ router.get('/dashboard/new', redirect, async (req, res) => {
 })
 
 router.get('/dashboard/view/:id', redirect, async (req, res) => {
-    // if (req.session.user_id !== req.params.id)
     try {
       const postData = await Post.findByPk(req.params.id, {
         include: [
@@ -102,6 +101,28 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
             logged_in: req.session.logged_in
           });
       }
+    } catch (err) {
+      res.status(500).json(err);
+    }
+  });
+
+  router.get('/page/comment/:id', redirect, async (req, res) => {
+    try {
+      const postData = await Post.findByPk(req.params.id, {
+        include: [
+          {
+            model: User,
+            attributes: ['name'],
+          },
+        ],
+      });
+  
+      const viewPost = postData.get({ plain: true });
+      res.render('commentPage', {
+          ...viewPost,
+          logged_in: req.session.logged_in
+        });
+      
     } catch (err) {
       res.status(500).json(err);
     }

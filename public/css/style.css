@@ -126,8 +126,16 @@ body {
 
 #post-description,
 #edit-description {
-  height: 300px;
-  vertical-align: middle;
+  height: 250px;
+  text-align: start;
+  border: 2px solid rgb(230, 230, 230);
+  background-color: var(--white);
+  padding: 20px;
+  margin: 15px 0px;
+  border-radius: 20px;
+  outline: none;
+  background-color: white;
+  resize: none;
 }
 
 #postButton {

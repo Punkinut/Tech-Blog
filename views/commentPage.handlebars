@@ -8,6 +8,12 @@
         {{!-- Share icons in here --}}
     </section>
     <section class="comments">
+        {{#each currentComments}}
+        <section class="card2">
+            <p>{{this.comment}}{{user.name}} {{format_time this.date_created}}</p>
+        </section>
+        
+        {{/each}}
         {{!-- Comment section in here --}}
     </section>
 </section>

@@ -135,6 +135,7 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
 
       const viewPost = postData.get({ plain: true });
       res.render('commentPage', {
+          currentComments,
           viewPost,
           logged_in: req.session.logged_in
         });

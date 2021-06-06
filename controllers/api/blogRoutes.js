@@ -15,6 +15,20 @@ router.post('/post', async (req, res) => {
     }
   });
 
+  router.post('/comment/:id', async (req, res) => {
+    try {
+        const newComment = await Comment.create({
+            comment: req.body.comment,
+            user_id: req.session.user_id,
+            post_id: req.params.id
+        })
+        res.status(200).json(newComment)
+  
+    } catch (error) {
+      res.status(400).json({ error: error.toString() });
+    }
+  });
+
   router.delete('/delete/:id', async (req, res) => {
     try {
 

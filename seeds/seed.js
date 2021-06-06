@@ -3,7 +3,8 @@ const { User, Post, Comment } = require('../models');
 
 const userData = require('./userData.json');
 const postData = require('./postData.json');
-const commentData = require('./commentData.json')
+const commentData = require('./commentData.json');
+const session = require('express-session');
 
 const seedDatabase = async () => {
     await sequelize.sync({ force: true });

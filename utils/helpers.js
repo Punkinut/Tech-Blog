@@ -1,5 +1,5 @@
 const format_time = (date) => {
-  const day = date.getDay() - 1;
+  const day = date.getDate();
   const month = date.toLocaleString('en-us', { month: 'short' });;
   const year = date.getFullYear();
   return `${day} ${month} ${year}`;

@@ -7,13 +7,18 @@
     <section class="shareButtons">
         {{!-- Share icons in here --}}
     </section>
-    <section class="comments">
-        {{#each currentComments}}
-        <section class="card2">
-            <p>{{this.comment}}{{user.name}} {{format_time this.date_created}}</p>
+</section>
+<section class="comments roboto">
+    {{#each currentComments}}
+    <section class="comment">
+        <img src="/images/circle.svg" class="profile-icon"/>
+        <div class="commentCon">
+            <p>{{this.comment}}</p>
+        </div>
+        <section class="poster roboto">
+            <p>{{user.name}} | {{format_time this.date_created}}</p>
         </section>
-        
-        {{/each}}
-        {{!-- Comment section in here --}}
     </section>
+    {{/each}}
+    {{!-- Comment section in here --}}
 </section>

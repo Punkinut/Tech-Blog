@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post} = require('../models');
+const { User, Post, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 const redirect= require('../utils/redirect');
 const home = require('../utils/home');
@@ -116,7 +116,23 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
           },
         ],
       });
-  
+
+      const commentData = await Comment.findAll({
+          where: {
+              post_id: req.params.id
+          },
+          include: [
+            {
+                model: User,
+                attributes: ['name'],
+            },
+        ],
+          order: [['id', 'DESC']],
+      });
+
+      const currentComments = commentData.map((comment) => comment.get({ plain: true}));
+      console.log(currentComments)
+
       const viewPost = postData.get({ plain: true });
       res.render('commentPage', {
           viewPost,

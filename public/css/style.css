@@ -105,6 +105,17 @@ body {
   padding-bottom: 70px;
 }
 
+.pageContainer {
+  width: 100%;
+  position: relative;
+  margin: 15px auto;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .newContainer {
   min-height: 60vh;
   display: flex;
@@ -136,6 +147,32 @@ body {
   outline: none;
   background-color: white;
   resize: none;
+}
+
+#comment {
+  width: 100%;
+  height: 200px;
+  text-align: start;
+  border: 2px solid rgb(230, 230, 230);
+  background-color: var(--white);
+  padding: 20px;
+  margin: 15px 0px;
+  border-radius: 20px;
+  outline: none;
+  background-color: white;
+  resize: none;
+}
+
+.comment-form {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 50px;
+}
+
+.add-container {
+  display: flex;
+  justify-content: center;
 }
 
 #postButton {
@@ -210,6 +247,11 @@ body {
   font-size: 14px;
   /* border-radius: 50px 50px 50px 0px; */
   line-height: 1.5rem;
+}
+
+.add-comment {
+  display: flex;
+  justify-content: center;
 }
 
 .profile-icon {

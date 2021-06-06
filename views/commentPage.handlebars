@@ -1,4 +1,4 @@
-<section class="container">
+<section class="pageContainer">
     <section class="card3 roboto">
         <p class="f700 heading">{{viewPost.name}}</p>
         <p class="f300 date">{{format_time viewPost.date_created}} | {{viewPost.user.name}}</p>
@@ -7,6 +7,16 @@
     <section class="shareButtons">
         {{!-- Share icons in here --}}
     </section>
+</section>
+<section class="add-comment roboto">
+    <form class="form comment-form font">
+      <div class="form-group">
+        <textarea class="form-input" type="text" id="comment"  placeholder="Add a comment" required></textarea>
+      </div>
+      <div class="form-group add-container">
+        <button class="btn btn-primary log" type="submit" id="commentButton">Comment</button>
+      </div>
+    </form>
 </section>
 <section class="comments roboto">
     {{#each currentComments}}
@@ -20,5 +30,4 @@
         </section>
     </section>
     {{/each}}
-    {{!-- Comment section in here --}}
 </section>

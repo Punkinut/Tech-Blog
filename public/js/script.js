@@ -1,11 +1,13 @@
 const pathname = document.location.pathname
 
-if ( pathname === '/redirect') {
-    $('.navigation').css('display', 'none')
+for (let i = 0; i < 1000; i++) {
+    if ( pathname === '/dashboard' || pathname === `/page/comment/${i}`) {
+        $('.dash').css('display', 'none')
+        $('.home').css('display', 'block')
+        $('.title').css('right', '0px')
+    }
 }
 
-if ( pathname === '/dashboard' || pathname === '/page/comment/2') {
-    $('.dash').css('display', 'none')
-    $('.home').css('display', 'block')
-    $('.title').css('right', '0px')
+if ( pathname === '/redirect') {
+    $('.navigation').css('display', 'none')
 }

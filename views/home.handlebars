@@ -1,8 +1,8 @@
 <section class="container">
     {{#if homeStatus}}
     {{#each posts}}
-    <a href="/page/comment/{{this.id}}">
-        <section class="card roboto">
+    <a href="/page/comment/{{this.id}}" class="card">
+        <section class="roboto">
             <p class="f700 heading">{{this.name}}</p>
             <p class="f300 date">{{format_time this.date_created}} | {{this.user.name}}</p>
             <p class="f400 desc">{{this.description}}</p>

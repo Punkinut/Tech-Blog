@@ -43,8 +43,9 @@ router.get('/profile/:id', redirect, async (req, res) => {
         const userPage = userDetails.get({ plain: true });
 
         res.render('profile', {
-            logged_in: req.session.logged_in ,
-            ...userPage
+            logged_in: req.session.logged_in,
+            ...userPage,
+            user_id: req.session.user_id
         });
     } catch (err) {
         res.status(500).json(err);
@@ -72,7 +73,8 @@ router.get('/dashboard', redirect, async (req, res) => {
         res.render('dashboard', {
             postStatus,
             currentPosts,
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id
         });
     } catch (err) {
         res.status(500).json(err);
@@ -90,7 +92,8 @@ router.get('/redirect', withAuth, async (req, res) => {
 router.get('/dashboard/new', redirect, async (req, res) => {
     try {
         res.render('new', {
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id
         });
     } catch (err) {
         res.status(500).json(err);
@@ -114,7 +117,8 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
       } else {
         res.render('editPost', {
             ...viewPost,
-            logged_in: req.session.logged_in
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id
           });
       }
     } catch (err) {
@@ -153,7 +157,8 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
       res.render('commentPage', {
           currentComments,
           viewPost,
-          logged_in: req.session.logged_in
+          logged_in: req.session.logged_in,
+          user_id: req.session.user_id
         });
       
     } catch (err) {

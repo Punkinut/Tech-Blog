@@ -37,8 +37,17 @@ router.get('/', async (req, res) => {
 
 router.get('/profile', redirect, async (req, res) => {
     try {
+
+        const userDetails = await User.findAll({
+            where: {
+                id: req.session.user_id
+            }
+        })
+        const userPage = userDetails.map((det) => det.get({ plain: true}));
+
         res.render('profile', {
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in ,
+            userPage
         });
     } catch (err) {
         res.status(500).json(err);

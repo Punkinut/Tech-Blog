@@ -35,6 +35,16 @@ router.get('/', async (req, res) => {
     }
 })
 
+router.get('/profile', redirect, async (req, res) => {
+    try {
+        res.render('profile', {
+            logged_in: req.session.logged_in 
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
 router.get('/dashboard', redirect, async (req, res) => {
 
     const userPosts = await Post.findAll({

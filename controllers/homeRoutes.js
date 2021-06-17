@@ -28,26 +28,23 @@ router.get('/', async (req, res) => {
         res.render('home', {
             homeStatus,
             posts,
-            logged_in: req.session.logged_in 
+            logged_in: req.session.logged_in,
+            user_id: req.session.user_id
         });
     } catch (err) {
         res.status(500).json(err);
     }
 })
 
-router.get('/profile', redirect, async (req, res) => {
+router.get('/profile/:id', redirect, async (req, res) => {
     try {
 
-        const userDetails = await User.findAll({
-            where: {
-                id: req.session.user_id
-            }
-        })
-        const userPage = userDetails.map((det) => det.get({ plain: true}));
+        const userDetails = await User.findByPk(req.params.id)
+        const userPage = userDetails.get({ plain: true });
 
         res.render('profile', {
             logged_in: req.session.logged_in ,
-            userPage
+            ...userPage
         });
     } catch (err) {
         res.status(500).json(err);

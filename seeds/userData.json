@@ -3,18 +3,18 @@
       "name": "Alec",
       "email": "alec@example.com",
       "password": "password12345",
-      "picture": "/Images/avatars/dry-clean.png"
+      "picture": "/Images/avatars/3.svg"
     },
     {
       "name": "Tom",
       "email": "tom@example.com",
       "password": "password12345",
-      "picture": "/Images/avatars/dry-clean.png"
+      "picture": "/Images/avatars/23.svg"
     },
     {
       "name": "Jim",
       "email": "jim@example.com",
       "password": "password12345",
-      "picture": "/Images/avatars/dry-clean.png"
+      "picture": "/Images/avatars/26.svg"
     }
   ]

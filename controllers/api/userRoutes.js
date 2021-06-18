@@ -7,7 +7,7 @@ router.post('/', async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: req.body.password,
-      picture: `#`
+      picture: `/Images/avatars/dry-clean.png`
     });
 
     req.session.save(() => {

@@ -88,6 +88,21 @@ body {
   bottom: 20px;
 }
 
+.profile-image {
+  opacity: 5%;
+  width: 200px;
+  margin: 20px;
+}
+
+.profile-name,
+.profile-description {
+  line-height: 1.5rem;
+}
+
+.logout {
+  display: none;
+}
+
 .nav-bottom {
   display: block;
   background-color: #29282800;

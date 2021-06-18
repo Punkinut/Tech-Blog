@@ -5,6 +5,8 @@ for (let i = 0; i < 1000; i++) {
         $('.dash').css('display', 'none')
         $('.home').css('display', 'block')
         $('.title').css('right', '0px')
+        $('.logout').css('display', 'block')
+        $('.profile-click').css('display', 'none')
     }
 }
 

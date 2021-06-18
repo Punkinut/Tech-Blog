@@ -2,16 +2,19 @@
     {
       "name": "Alec",
       "email": "alec@example.com",
-      "password": "password12345"
+      "password": "password12345",
+      "picture": "/Images/avatars/dry-clean.png"
     },
     {
       "name": "Tom",
       "email": "tom@example.com",
-      "password": "password12345"
+      "password": "password12345",
+      "picture": "/Images/avatars/dry-clean.png"
     },
     {
       "name": "Jim",
       "email": "jim@example.com",
-      "password": "password12345"
+      "password": "password12345",
+      "picture": "/Images/avatars/dry-clean.png"
     }
   ]

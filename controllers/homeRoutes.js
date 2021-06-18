@@ -132,7 +132,7 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
         include: [
           {
             model: User,
-            attributes: ['name'],
+            attributes: ['name', 'picture'],
           },
         ],
       });
@@ -144,7 +144,7 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
           include: [
             {
                 model: User,
-                attributes: ['name'],
+                attributes: ['name', 'picture'],
             },
         ],
           order: [['id', 'DESC']],

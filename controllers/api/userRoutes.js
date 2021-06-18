@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post } = require('../../models');
+const number = require('../../utils/randomNumber');
 
 router.post('/', async (req, res) => {
   try {
@@ -7,7 +8,7 @@ router.post('/', async (req, res) => {
       name: req.body.name,
       email: req.body.email,
       password: req.body.password,
-      picture: `/Images/avatars/dry-clean.png`
+      picture: `/Images/avatars/${number}.svg`
     });
 
     req.session.save(() => {

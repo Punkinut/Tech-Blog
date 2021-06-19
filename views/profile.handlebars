@@ -1,5 +1,9 @@
 <section class="container roboto">
+    {{#if profileCheck}}
     <a href="/changeicon"><img src="{{picture}}" class="profile-image"/></a>
+    {{else}}
+    <img src="{{picture}}" class="profile-image"/>
+    {{/if}}
     <p class="profile-name f500">{{name}}</p>
     <p class="profile-description">Description</p>
 </section>

@@ -150,6 +150,7 @@ body {
   width: 30px;
   margin-bottom: 18px;
   opacity: 90%;
+  cursor: pointer;
 }
 
 .profile-name {

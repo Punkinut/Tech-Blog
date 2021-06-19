@@ -146,6 +146,12 @@ body {
   text-align: center;
 }
 
+.edit-pencil {
+  width: 30px;
+  margin-bottom: 18px;
+  opacity: 90%;
+}
+
 .profile-name {
   font-size: 18px;
 }

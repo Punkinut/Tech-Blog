@@ -152,6 +152,16 @@ body {
   opacity: 90%;
   cursor: pointer;
 }
+.icon-add {
+  text-align: center;
+}
+
+.icon-text {
+  position: relative;
+  bottom: 50px;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
 
 .profile-name {
   font-size: 18px;

@@ -35,7 +35,7 @@ const signupFormHandler = async (event) => {
 
     if (response.ok) {
       if (pathname === '/signup') {
-        document.location.replace('/changeicon');
+        document.location.replace('/addicon');
         $('.navigation').css('display', 'none')
       } else {
         document.location.replace('/dashboard');

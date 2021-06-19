@@ -10,6 +10,6 @@ for (let i = 0; i < 1000; i++) {
     }
 }
 
-if ( pathname === '/redirect' || pathname === '/changeicon') {
+if ( pathname === '/redirect' || pathname === '/changeicon' || pathname === '/addicon') {
     $('.navigation').css('display', 'none')
 }

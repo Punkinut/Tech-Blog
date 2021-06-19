@@ -3,6 +3,7 @@ const { User, Post, Comment} = require('../models');
 const withAuth = require('../utils/auth');
 const redirect= require('../utils/redirect');
 const home = require('../utils/home');
+let pageVisit;
 
 router.get('/', async (req, res) => {
     try {
@@ -39,6 +40,7 @@ router.get('/', async (req, res) => {
 router.get('/profile/:id', redirect, async (req, res) => {
     try {
 
+        pageVisit = true;
         const userDetails = await User.findByPk(req.params.id)
         const userPage = userDetails.get({ plain: true });
 
@@ -96,6 +98,21 @@ router.get('/changeicon', redirect, async (req, res) => {
             logged_in: req.session.logged_in,
             user_id: req.session.user_id
         });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+})
+
+router.get('/addicon', redirect, async (req, res) => {
+    try {
+        if (pageVisit === true) {
+            res.redirect('/changeicon');
+          } else {
+            res.render('addIcon', {
+                logged_in: req.session.logged_in,
+                user_id: req.session.user_id
+            });
+          }
     } catch (err) {
         res.status(500).json(err);
     }

@@ -172,6 +172,10 @@ body {
   line-height: 1.5rem;
 }
 
+.profile-description {
+  opacity: 70%;
+}
+
 .logout {
   display: none;
 }

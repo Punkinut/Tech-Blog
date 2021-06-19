@@ -6,5 +6,9 @@
     <img src="{{picture}}" class="profile-image"/>
     {{/if}}
     <p class="profile-name f500">{{name}}</p>
-    <p class="profile-description">Description</p>
+    {{#if showCase}}
+    <p class="profile-description">Welcome to my profile</p>
+    {{else}}
+    <p class="profile-description">{{description}}</p>
+    {{/if}}
 </section>

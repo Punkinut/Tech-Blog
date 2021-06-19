@@ -43,6 +43,12 @@ router.get('/profile/:id', redirect, async (req, res) => {
         pageVisit = true;
         const userDetails = await User.findByPk(req.params.id)
         const userPage = userDetails.get({ plain: true });
+        let showCase
+        if (userPage.description === null) {
+            showCase = true
+        } else {
+            showCase = false
+        }
 
         // Checks if the paramter matches the user
         let profileCheck;
@@ -55,6 +61,7 @@ router.get('/profile/:id', redirect, async (req, res) => {
         res.render('profile', {
             logged_in: req.session.logged_in,
             ...userPage,
+            showCase,
             user_id: req.session.user_id,
             profileCheck
         });

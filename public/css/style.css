@@ -94,6 +94,58 @@ body {
   cursor: pointer;
 }
 
+.icon-model {
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--white);
+  position: relative;
+  padding-top: 200px;
+  z-index: 1000;
+}
+
+.image-container {
+  border-radius: 10px;
+  height: 300px;
+  margin: 10px;
+  padding: 20px 50px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  width: 60%;
+  overflow-y: hidden;
+  background-color: rgba(220, 220, 220, 0.185);
+}
+
+.chooseImage {
+  width: 200px;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.chooseImage:hover {
+  opacity: 90%;
+}
+
+.back-button {
+  font-size: var(--body-text);
+  color: var(--main-color-heading);
+  padding: 15px;
+  margin: 10px;
+  background-color: rgba(220, 220, 220, 0.185);
+  border-radius: 8px;
+  cursor: pointer;
+  border: none;
+  transition: all 100ms ease-in-out;
+}
+
+#real-back {
+  width: 100px;
+  margin: 20px auto;
+  text-align: center;
+}
+
 .profile-name {
   font-size: 18px;
 }
@@ -441,6 +493,10 @@ button:hover {
 }
 
 @media screen and (max-width: 400px) {
+  .image-container {
+    width: 95%;
+  }
+
   .navigation {
     width: 80%;
   }

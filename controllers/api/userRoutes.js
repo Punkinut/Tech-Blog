@@ -41,6 +41,25 @@ router.put('/update/:id', async (req, res) => {
   }
 })
 
+router.put('/update/profile/:id', async (req, res) => {
+  try {
+    const profileUpdate = await User.update(
+      {
+        description: req.body.description,
+      },
+      {
+        where: {
+          id: req.params.id,
+        },
+      }
+    )
+
+    res.status(200).json(profileUpdate)
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 router.post('/login', async (req, res) => {
     try {
       const userData = await User.findOne({ where: { email: req.body.email } });

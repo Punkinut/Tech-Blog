@@ -6,14 +6,14 @@ const updateProfile = async (event) => {
       const description = $('#edit-description').val().trim();
 
       if (description) {
-        const response = await fetch(`/api/blog/update/${id}`, {
+        const response = await fetch(`/api/users/update/profile/${id}`, {
             method: 'PUT',
             body: JSON.stringify({ description }),
             headers: { 'Content-Type': 'application/json' },
           });
     
           if (response.ok) {
-            document.location.replace('/dashboard');
+            document.location.replace(`/profile/${id}`);
           } else {
             console.log('ERROR')
           }

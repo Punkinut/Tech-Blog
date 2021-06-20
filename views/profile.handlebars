@@ -11,4 +11,12 @@
     {{else}}
     <p class="profile-description">{{description}}</p>
     {{/if}}
+    {{#each postFeed}}
+    <a href="/page/comment/{{this.id}}">
+        <section class="card2">
+            <p class="f400 curHead roboto">{{this.name}}</p>
+            <p class="f400 roboto datePost">{{format_time this.date_created}}</p>
+        </section>
+    </a>
+    {{/each}}
 </section>

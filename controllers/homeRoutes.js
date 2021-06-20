@@ -42,6 +42,13 @@ router.get('/profile/:id', redirect, async (req, res) => {
 
         pageVisit = true;
         const userDetails = await User.findByPk(req.params.id)
+        const postInfo = await Post.findAll({
+            where: {
+                user_id: req.params.id
+            },
+            order: [['id', 'DESC']],
+        });
+        const postFeed = postInfo.map((posty) => posty.get({ plain: true}));
         const userPage = userDetails.get({ plain: true });
         let showCase
         if (userPage.description === null) {
@@ -61,6 +68,7 @@ router.get('/profile/:id', redirect, async (req, res) => {
         res.render('profile', {
             logged_in: req.session.logged_in,
             ...userPage,
+            postFeed,
             showCase,
             user_id: req.session.user_id,
             profileCheck

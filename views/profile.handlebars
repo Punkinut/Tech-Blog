@@ -1,13 +1,13 @@
 <section class="container roboto">
     {{#if profileCheck}}
     <a href="/changeicon"><img src="{{picture}}" class="profile-image"/></a>
-    <img src="/Images/pencil.png"/ class="edit-pencil">
+    <a href="/profile/edit/{{id}}"><img src="/Images/pencil.png"/ class="edit-pencil"></a>
     {{else}}
     <img src="{{picture}}" class="profile-image"/>
     {{/if}}
     <p class="profile-name f500">{{name}}</p>
     {{#if showCase}}
-    <p class="profile-description">Welcome to my profile</p>
+    <p class="profile-description">Welcome to my profile!</p>
     {{else}}
     <p class="profile-description">{{description}}</p>
     {{/if}}

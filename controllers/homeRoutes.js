@@ -144,6 +144,26 @@ router.get('/dashboard/new', redirect, async (req, res) => {
     }
 })
 
+router.get('/profile/edit/:id', redirect, async (req, res) => {
+    try {
+        const profileData = await User.findByPk(req.params.id);
+        const editProfileData = profileData.get({ plain: true });
+
+        if (req.params.id != req.session.user_id) {
+            res.redirect('/');
+          } else {
+            res.render('editProfile', {
+                ...editProfileData,
+                logged_in: req.session.logged_in,
+                user_id: req.session.user_id
+            })
+          }
+        
+    } catch (err) {
+        res.status(500).json(err)
+    }
+})
+
 router.get('/dashboard/view/:id', redirect, async (req, res) => {
     try {
       const postData = await Post.findByPk(req.params.id, {

@@ -115,7 +115,7 @@ body {
   position: absolute;
   right: 30px;
   bottom: 29px;
-  display: none;
+  display: block;
 }
 
 .image-container {

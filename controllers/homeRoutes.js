@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment} = require('../models');
+const { User, Post, Comment, hasLiked} = require('../models');
 const withAuth = require('../utils/auth');
 const redirect= require('../utils/redirect');
 const home = require('../utils/home');

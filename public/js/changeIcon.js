@@ -10,7 +10,12 @@ const updateIcon = async (event) => {
           });
     
           if (response.ok) {
-            document.location.replace(`/profile/${id}`);
+            if(pathname === '/changeicon') {
+              document.location.replace(`/profile/${id}`);
+            } else {
+              document.location.replace(`/profile/edit/${id}`);
+            }
+            
           } else {
             console.log('ERROR')
           }

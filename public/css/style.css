@@ -104,6 +104,20 @@ body {
   z-index: 1000;
 }
 
+.non-heart {
+  width: 25px;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+}
+.heart {
+  width: 25px;
+  position: absolute;
+  right: 30px;
+  bottom: 29px;
+  display: none;
+}
+
 .image-container {
   border-radius: 10px;
   height: 300px;
@@ -296,6 +310,7 @@ body {
 
 .card {
   overflow: hidden;
+  position: relative;
   width: 600px;
   margin: 30px 0px;
   padding: 60px;

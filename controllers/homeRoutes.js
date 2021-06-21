@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, Post, Comment, hasLiked} = require('../models');
+const { User, Post, Comment, Hearts} = require('../models');
 const withAuth = require('../utils/auth');
 const redirect= require('../utils/redirect');
 const home = require('../utils/home');
@@ -26,12 +26,43 @@ router.get('/', async (req, res) => {
             homeStatus = true
         }
 
-        res.render('home', {
-            homeStatus,
-            posts,
-            logged_in: req.session.logged_in,
-            user_id: req.session.user_id
-        });
+        if (req.session.logged_in) {
+            const hearts = await Hearts.findAll({
+                where: {
+                    user_id: req.session.user_id
+                }
+            })
+    
+            const haveHearted = hearts.map((heart) => heart.get({ plain: true}))
+            console.log(haveHearted)
+            // Gotta figure out how to have heart display on one post
+            let allowHeart;
+            if (haveHearted.length == 0){
+                allowHeart = true
+            }
+            else{
+                allowHeart = false
+            }
+            res.render('home', {
+                homeStatus,
+                allowHeart,
+                posts,
+                logged_in: req.session.logged_in,
+                user_id: req.session.user_id
+            });
+        } else {
+            let allowHeart = true;
+            res.render('home', {
+                homeStatus,
+                allowHeart,
+                posts,
+                logged_in: req.session.logged_in,
+                user_id: req.session.user_id
+            });
+        }
+
+
+        
     } catch (err) {
         res.status(500).json(err);
     }
@@ -223,7 +254,6 @@ router.get('/dashboard/view/:id', redirect, async (req, res) => {
       });
 
       const currentComments = commentData.map((comment) => comment.get({ plain: true}));
-      console.log(currentComments)
 
       const viewPost = postData.get({ plain: true });
       res.render('commentPage', {

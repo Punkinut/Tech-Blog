@@ -18,6 +18,11 @@ Post.init(
       description: {
         type: DataTypes.STRING,
       },
+      hearts: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        defaultValue: 0
+      },
       date_created: {
         type: DataTypes.DATE,
         allowNull: false,

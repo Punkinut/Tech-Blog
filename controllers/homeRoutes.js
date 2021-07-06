@@ -35,6 +35,7 @@ router.get('/', async (req, res) => {
     
             const haveHearted = hearts.map((heart) => heart.get({ plain: true}))
             console.log(haveHearted)
+            console.log(posts)
             // Gotta figure out how to have heart display on one post
             let allowHeart;
             if (haveHearted.length == 0){

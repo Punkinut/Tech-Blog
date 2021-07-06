@@ -1,59 +1,69 @@
 [
     {
+      "id": 1,
       "name": "Welcome everyone 👋",
       "description": "Click on this post to add a comment! Or sign up to create your own.",
       "date_created": "2021-06-06 09:26:54",
       "user_id": 1
     },
     {
+      "id": 2,
       "name": "My son",
       "description": "My son is amazing",
       "date_created": "2021-06-06 09:31:24",
       "user_id": 2
     },
     {
+      "id": 4,
       "name": "Whip or Nae Nae",
       "description": "Which one",
       "date_created": "2021-06-06 09:45:47",
       "user_id": 3
     },
     {
+      "id": 5,
       "name": "Aye",
       "description": "B C D",
       "date_created": "2021-06-06 09:50:12",
       "user_id": 3
     },
     {
+      "id": 8,
       "name": "My Mcfluff Chicken Nuggets",
       "description": "Hey guys, we finally have chicken nuggets on our menu! come and get it while it’s nice and fresh $100 each! come get your own now! 💆‍♂️🐹👅",
       "date_created": "2021-06-06 09:59:12",
       "user_id": 4
     },
     {
+      "id": 10,
       "name": "Good Morning YALL this is your wake up call",
       "description": "BOOM BOOM BOOM BOOM I WANT YOU IN MY ROOM LETS SPEND THE NIGJT TOGETHER AND BE HERE FOREVER 👾👺🦿👩‍🦱",
       "date_created": "2021-06-06 20:52:22",
       "user_id": 4
     },
     {
+      "id": 11,
       "name": "Wickity Wack Rhyme Everyone",
       "description": "Wickity Wack the postmans fat",
       "date_created": "2021-06-06 22:11:30",
       "user_id": 2
     },
     {
+      "id": 12,
       "name": "damn this looks fresh",
       "description": "dude this is pimp shrimpin",
       "date_created": "2021-06-07 03:40:10",
       "user_id": 5
     },
     {
+      "id": 13,
       "name": "Tommy’s “Kiss Me More” Doja Cat obsession",
       "description": "Hey guys, Tommy keeps singing “Kiss Me More” by Doja Cat! He’s obsessed I taught my bby well 😌😌😌😌 Come watch $10 per minute and enjoy the festival in Cinda’s new play house. Hope to see you all there!",
       "date_created": "2021-06-07 10:11:40",
       "user_id": 4
     },
     {
+      "id": 15,
       "name": "Update coming soon 🗒",
       "description": "In the next coming update you will be able to view / edit your profile, like posts, follow people and more. Stay tuned 😄",
       "date_created": "2021-06-17 04:37:36",

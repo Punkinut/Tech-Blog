@@ -24,14 +24,14 @@
       "name": "Cancelled",
       "email": "laura@test.com",
       "password": "$2b$10$SVnYrRjZy7jdHV/CowX3MuQr4hros6K.U8YxaDW3hCdZgYvygGnFm",
-      "picture": "/images/avatars/26.svg",
+      "picture": "/images/avatars/27.svg",
       "description": "No bio yet!"
     },
     {
       "name": "noah",
       "email": "noahtdrost@gmail.com",
       "password": "$2b$10$u9bv54STnSdaO2PYlWlQGu1MzS.aAnTpt4xZ/KCh3CGXrDsfxwQSC",
-      "picture": "/images/avatars/26.svg",
+      "picture": "/images/avatars/28.svg",
       "description": "No bio yet!"
     }
   ]

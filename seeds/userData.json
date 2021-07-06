@@ -3,21 +3,21 @@
       "name": "Alec",
       "email": "alec@example.com",
       "password": "password12345",
-      "picture": "/Images/avatars/3.svg",
+      "picture": "/images/avatars/3.svg",
       "description": "My name is Alec and I like pets!"
     },
     {
       "name": "Tom",
       "email": "tom@example.com",
       "password": "password12345",
-      "picture": "/Images/avatars/23.svg",
+      "picture": "/images/avatars/23.svg",
       "description": "What's going on, this is my page."
     },
     {
       "name": "Jim",
       "email": "jim@example.com",
       "password": "password12345",
-      "picture": "/Images/avatars/26.svg",
+      "picture": "/images/avatars/26.svg",
       "description": "I like going to the beach!"
     }
   ]
